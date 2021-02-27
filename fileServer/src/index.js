@@ -10,7 +10,7 @@ var cloudinary = require("cloudinary");
 cloudinary.config({
   cloud_name: "dnh2hkbuf",
   api_key: "491874445585153",
-  api_secret: "pgq6oDTwMgGPrXHa64bTMtidsOk"
+  api_secret: "pogstuff__api__key___"
 });
 
 app.use(bodyParser.json({ extended: true }));
