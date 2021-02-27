@@ -42,7 +42,7 @@
 
     <!--Welcome Section-->
     <section id = "welcome">
-      <h1>Welcome to Placeholder</h1>
+      <h1>Welcome to DynamicDerma</h1>
 
       <!--Get started button-->
       <a href="#evaluator"><img src="/images/getstarted.png"/></a><br>
@@ -52,25 +52,30 @@
     <section id = "evaluator">
       <h1>Skincare Evaluator</h1>
          
-      <img src = "images/sample.png"></img>
+      <img id = "picture" src = "images/sample.png"></img>
       
       <!--Form for the evaluation-->
-      <form action="https://BackendServerDermo.joshuazou.repl.co" method="POST">
-        <p>To have an image evaluated, input the URL for an image or upload an image that you want evaluated. Please make sure to upload a close up image of your skin condition with a similar format to the image displayed on the right.</p>
-        <div id = "poggers">
-          <label for="url" id = "nopadding"> <br><br> URL:</label>
-          <input name="url" id="url"/><br><br>
-          <input type="image" src="images/evaluateurl.png" class="btTxtsubmit" id="saveForm"/>
-          <br><br>
-        </div>
-      </form>      
+      <p>Upload an image that you want evaluated. Please make sure to upload a close up image of your skin condition with a similar format to the image displayed on the right.</p>
+
       
+      
+      <!--Form for the evaluation-->
       <form ref='uploadForm' id='uploadForm' action='https://xkpi8.sse.codesandbox.io/upload' method='post' encType="multipart/form-data">
         <input type="file" name="sampleFile" />
-        <input type="image" src="images/evaluateupload.png" class="btTxtsubmit" id="saveForm"/>
+        <input type="image" src="images/evaluateupload.png" class="btTxtsubmit" id="saveForm" onclick="button();"/>
       </form>     
     </section>
+    <br>
+    <!--Loading gif-->
 
+      <img src="https://wpamelia.com/wp-content/uploads/2018/11/ezgif-2-6d0b072c3d3f.gif" class="loadingGif" id="loadingGif" /> 
+      
+          <script>
+      document.getElementById('loadingGif').style.visibility='hidden';
+      function button(){
+      document.getElementById('loadingGif').style.visibility='visible';
+      }
+    </script>
     <!--Map section begins-->
     <section id = "map">
       <h1>Dermatologist Map</h1>
@@ -83,7 +88,7 @@
     <section id = "about">
       
       <h1>About</h1>
-      <p>PLACEHOLDER is a website deisgned to help diagnose skin conditions while educating users about dermatology. Out evaluator can detect over 20 of the <a href = "https://www.healthline.com/health/skin-disorders"target = "_blank" class = "tooltip">most common skin diseases<span class="tooltiptext">Click to see a list of common skin diseases</span></a>. Using <a class = "tooltip" href = "https://www.google.com/imghp?hl=en"target = "_blank">Google Image Search  <span class="tooltiptext">Click to find out more about Google Images</span></a> we are able to evaluate the skin disease. For the results, tips, and information about dermatology, we used information from the <a href = "https://www.mayoclinic.org/"target = "_blank" class = "tooltip">Mayo Clinic<span class="tooltiptext">Click to find out more about Mayo Clinic</span></a> and the <a href = "https://www.aad.org/public" target = "_blank" class = "tooltip"> American Academy of Dermatology<span class="tooltiptext">Click to find out more about the American Academy of Dermatology</span></a>.</p>
+      <p>DynamicDerma is a website deisgned to help diagnose skin conditions while educating users about dermatology. Out evaluator can detect over 20 of the <a href = "https://www.healthline.com/health/skin-disorders"target = "_blank" class = "tooltip">most common skin diseases<span class="tooltiptext">Click to see a list of common skin diseases</span></a>. Using <a class = "tooltip" href = "https://www.google.com/imghp?hl=en"target = "_blank">Google Image Search  <span class="tooltiptext">Click to find out more about Google Images</span></a> we are able to evaluate the skin disease. For the results, tips, and information about dermatology, we used information from the <a href = "https://www.mayoclinic.org/"target = "_blank" class = "tooltip">Mayo Clinic<span class="tooltiptext">Click to find out more about Mayo Clinic</span></a> and the <a href = "https://www.aad.org/public" target = "_blank" class = "tooltip"> American Academy of Dermatology<span class="tooltiptext">Click to find out more about the American Academy of Dermatology</span></a>.</p>
     </section>
 
     <!--Contact section begins-->
@@ -119,7 +124,7 @@
         <li><a href="#map">Map</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a>&copy; Placeholder 2021</a></li>
+        <li><a>&copy; DynamicDerma 2021</a></li>
       </ul>
     </footer>
     
