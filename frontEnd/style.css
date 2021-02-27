@@ -226,6 +226,15 @@ nav a:hover {
 /*Evaluation Data Starts*/
 /*******************************/
 
+
+.loadingGif{
+  width: 200px;
+  border: none !important;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #evaluator{
   text-align: center;
   background-color: white;
@@ -481,3 +490,7 @@ footer ul{
 /*******************************/
 /*Tooltip data ends*/
 /*******************************/
+
+#picture {
+  margins-bottom: 10px;
+}
