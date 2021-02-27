@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <!--Metadata-->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <script type="module" src="scrollup.js"></script>
+  </head>
+  
+  <!--Formatting begins-->
+  <body>
+    
+    <!--Scrolltrigger for the scroll up button-->
+    <section class = "scrollTrigger"></section>
+    
+    <!--Menu bar begins-->
+    <header id = "menu">
+      <!--Pancake menu-->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      
+      <!--Adds logo-->
+      <a href="#menu"><img class = "logo" src="/images/logo.png"></a>
+
+      <nav>
+        <ul>
+          <li><a href="#evaluator">Evaluator</a></li>
+          <li><a href="#map">Map</a></li>
+          <li><a href="#About">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+      </label>
+    </header>
+
+    <!--Welcome Section-->
+    <section id = "welcome">
+      <h1>Welcome to Placeholder</h1>
+
+      <!--Get started button-->
+      <a href="#evaluator"><img src="/images/getstarted.png"/></a><br>
+    </section>
+
+    <!--Evaluation part of the website-->
+    <section id = "evaluator">
+      <h1>Skincare Evaluator</h1>
+         
+      <img src = "images/sample.png"></img>
+      
+      <!--Form for the evaluation-->
+      <form action="https://BackendServerDermo.joshuazou.repl.co" method="POST">
+        <p>To have an image evaluated, input the URL for an image or upload an image that you want evaluated. Please make sure to upload a close up image of your skin condition with a similar format to the image displayed on the right.</p>
+        <div id = "poggers">
+          <label for="url" id = "nopadding"> <br><br> URL:</label>
+          <input name="url" id="url"/><br><br>
+          <input type="image" src="images/evaluateurl.png" class="btTxtsubmit" id="saveForm"/>
+          <br><br>
+        </div>
+      </form>      
+      
+      <form ref='uploadForm' id='uploadForm' action='https://xkpi8.sse.codesandbox.io/upload' method='post' encType="multipart/form-data">
+        <input type="file" name="sampleFile" />
+        <input type="image" src="images/evaluateupload.png" class="btTxtsubmit" id="saveForm"/>
+      </form>     
+    </section>
+
+    <!--Map section begins-->
+    <section id = "map">
+      <h1>Dermatologist Map</h1>
+      
+      <!--Map image-->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d85883.68155809883!2d-122.17179150249615!3d47.72586827264069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sdermatologist!5e0!3m2!1sen!2sus!4v1614382306013!5m2!1sen!2sus" width="800" height="350" style="border:0;" allowfullscreen="" loading="lazy" id = "mapimage"></iframe>
+    </section>
+    
+    <!--About section begins-->
+    <section id = "about">
+      
+      <h1>About</h1>
+      <p>PLACEHOLDER is a website deisgned to help diagnose skin conditions while educating users about dermatology. Out evaluator can detect over 20 of the <a href = "https://www.healthline.com/health/skin-disorders"target = "_blank" class = "tooltip">most common skin diseases<span class="tooltiptext">Click to see a list of common skin diseases</span></a>. Using <a class = "tooltip" href = "https://www.google.com/imghp?hl=en"target = "_blank">Google Image Search  <span class="tooltiptext">Click to find out more about Google Images</span></a> we are able to evaluate the skin disease. For the results, tips, and information about dermatology, we used information from the <a href = "https://www.mayoclinic.org/"target = "_blank" class = "tooltip">Mayo Clinic<span class="tooltiptext">Click to find out more about Mayo Clinic</span></a> and the <a href = "https://www.aad.org/public" target = "_blank" class = "tooltip"> American Academy of Dermatology<span class="tooltiptext">Click to find out more about the American Academy of Dermatology</span></a>.</p>
+    </section>
+
+    <!--Contact section begins-->
+    <section id = "contact">
+      <h1>Contact Us</h1>
+
+      <!--Start of Form-->
+      <form action="https://getform.io/f/830e2aab-0700-413e-aeb5-dbc9075fd9a7" method="POST">
+
+        <!--Create name text box-->
+        <input type="text" id="name" name="name" placeholder = "Your name" cols = "15" rows = "1" required>
+        
+        <!--Create email text box-->
+        <input type="text" id="email" name="email" placeholder = "Your email (optional)" cols = "15" rows = "1" required>
+        <div>
+        <!--Create ask us anything text box-->
+        <textarea name="message" placeholder = "Ask us anything!" cols = "35" rows = "5"></textarea>
+        </div>
+        <input type="hidden">
+        <br>
+        <br>
+
+        <!--Creates submit button-->
+        <input type="image" src="images/submit.png" id="submit"/>
+        <br>
+      </form>
+    </section>
+
+    <footer><br>
+      <ul>      
+        <li><a href="#menu">Home</a></li>
+        <li><a href="#evaluator">Evaluator</a></li>
+        <li><a href="#map">Map</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a>&copy; Placeholder 2021</a></li>
+      </ul>
+    </footer>
+    
+    <!--Creates scroll to top-->
+    <button class="scrollToTopBtn">↑</button>
+  </body>
+
+
+</html>
