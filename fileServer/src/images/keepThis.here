@@ -1,0 +1,4 @@
+This is here because for the service we are using (code sandbox), 
+if you don't have a file in a folder, it will delete that folder
+and since we have our code so that once it recieves the file, 
+uploads it, it will automatically delete the local copy.
