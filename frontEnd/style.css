@@ -1,0 +1,483 @@
+/*******************************/
+/*Overall CSS Data Begins*/
+/*******************************/
+html {
+  scroll-behavior: smooth;
+  font-family: 'Open Sans', sans-serif;
+}
+/*******************************/
+/*Overall CSS Data Ends*/
+/*******************************/
+
+
+/*******************************/
+/*Menu Data Begins*/
+/*******************************/
+
+
+/*Lines 22-200 of style.css and lines 23 and 36-38 of index.html are from Kevin Powell, we in no way take credit for it (soucre: https://codepen.io/kevinpowell/pen/jxppmr)*/
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
+
+:root {
+  --background: #99AFD7;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+.content {
+  height: 200vh;
+  background-image: url(//unsplash.it/1000/1000);
+  background-blend-mode: multiply;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+}
+
+/* navigation styles start here */
+
+header {
+  background: var(--background);
+  text-align: center;
+  position: relative;
+  z-index: 999;
+  width: 100%;
+}
+
+/* changed this from the tutorial video to
+   allow it to gain focus, making it tabbable */
+.nav-toggle {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.nav-toggle:focus ~ .nav-toggle-label {
+  outline: 3px solid rgba(lightblue, .75);
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: var(--background);
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0px;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+  color: #ddd;
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+@media screen and (min-width: 800px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+  
+  .logo {
+    grid-column: 2 / 3;
+    padding-left: 10px;
+    padding-top: 10px;
+
+  }
+  
+  nav {
+    // all: unset; /* this causes issues with Edge, since it's unsupported */
+    
+    /* the following lines are not from my video, but add Edge support */
+    position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1,1);
+    background: none;
+    top: initial;
+    left: initial;
+    /* end Edge support stuff */
+    
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  nav ul {
+    display: flex;
+  }
+  
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+  
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+  
+  nav a:hover::before {
+    transform: scale(1,1);
+  }
+}
+
+
+/*******************************/
+/*Menu Data Ends*/
+/*******************************/
+
+
+/*******************************/
+/*Welcome Data Starts*/
+/*******************************/
+
+#welcome{
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #99AFD7;
+  color: white;
+}
+
+#welcome h1, #welcome img{
+  padding-bottom: 40px;
+}
+
+/*******************************/
+/*Welcome Data Ends*/
+/*******************************/
+
+/*******************************/
+/*Evaluation Data Starts*/
+/*******************************/
+
+#evaluator{
+  text-align: center;
+  background-color: white;
+  color: #99AFD7;
+}
+
+#evaluator h1{
+  padding-bottom: 20px;
+  padding-top: 30px;
+}
+#evaluator label, #evaluator p{
+  line-height: 2;
+  text-align: center;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+#nopadding{
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+.upload{
+   padding-left: 150px !important;
+}
+#evaluator form{
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+}
+#evaluator img{
+  float: right;
+  margin-right: 30px;
+  margin-left: 30px;
+  border-radius: 20%;
+  border: solid;
+  border-width: 5px;
+}
+.btTxtsubmit{
+  padding-right: 200px;
+  text-align: center;
+  height: auto;
+}
+#myfile{
+  padding-right: 100px !important;
+  position: absolute;
+}
+
+/*******************************/
+/*Evaluation Data Ends*/
+/*******************************/
+
+
+/*******************************/
+/*Map Data Begins*/
+/*******************************/
+#map {
+  text-align: center;
+  color: #ffffff;
+  background-color:#99AFD7
+}
+#map h1{
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+#mapimage{
+  padding-bottom: 50px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+
+/*******************************/
+/*Map Data Ends*/
+/*******************************/
+
+
+/*******************************/
+/*About Data Begins*/
+/*******************************/
+
+#about {
+  text-align: center
+}
+
+#about h1 {
+  color: #99AFD7;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+#about p{
+  color: #99AFD7;
+  padding-bottom: 30px;
+  padding-right: 30px;
+  padding-left: 30px;
+  line-height: 2;
+}
+
+#about a{
+  text-decoration: underline;
+  font-weight: bold;
+  color: #99AFD7;
+}
+
+
+/*******************************/
+/*About Data Ends*/
+/*******************************/
+
+/*******************************/
+/*Contact Data Begins*/
+/*******************************/
+
+
+
+#contact {
+  background-color: #99AFD7;
+  width: 100%;
+  height: 300px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 30px;
+  padding-top: 10px;
+}
+textarea{
+  padding-bottom: 0px;
+  padding-top:0px;
+  resize: none;
+}
+
+#submit{
+  padding-bottom: 100px !important;
+  padding-top: 0px !important;
+  margin: 0;
+}
+
+/*******************************/
+/*Contact Data Ends*/
+/*******************************/
+
+
+/*******************************/
+/*Footer Data Starts*/
+/*******************************/
+
+footer {
+  background-color: #576580;
+  width: 100%;
+  height: 300px;
+  text-align: center;
+  text-decoration: none; 
+  color:#ffffff;
+  style: none;
+  line-height: 30px;
+}
+
+footer a {
+  padding-top: 10px;
+  color:#ffffff;
+  text-decoration: none;
+}
+
+footer ul{
+  list-style-type: none;
+  padding-right: 40px;
+}
+
+/*******************************/
+/*Footer Data Ends*/
+/*******************************/
+
+
+/*******************************/
+/*Scroll Data Begins*/
+/*******************************/
+
+.scrollToTopBtn {
+  
+  background-color: #8390aa;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 48px;
+  width: 48px;
+  
+  /* place it at the bottom right corner */
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  /* keep it at the top of everything else */
+  z-index: 100;
+  /* hide with opacity */
+  opacity: 0;
+  /* also add a translate effect */
+  transform: translateY(100px);
+  /* and a transition */
+  transition: all .5s ease
+}
+
+.showBtn {
+  opacity: 1;
+  transform: translateY(0)
+}
+
+
+/*******************************/
+/*Scroll Data Ends*/
+/*******************************/
+
+/*******************************/
+/*Tooltip data begins*/
+/*******************************/
+/*The next 35 lines of CSS were not created by us, the code is from https://www.w3schools.com/css/css_tooltip.asp*/
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 0px dotted black;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: #555;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  padding: 3px 5px;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/*******************************/
+/*Tooltip data ends*/
+/*******************************/
