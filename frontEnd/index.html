@@ -3,12 +3,14 @@
 <html>
 
   <head>
+    
+    <!--Adding favicon-->
+    <link rel="shortcut icon" href="images/favicon.png" />
 
     <!--Metadata-->
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
+    <title>DynamicDerma</title>
     <link href="style.css" rel="stylesheet" type="text/css"/>
     <script type="module" src="scrollup.js"></script>
   </head>
@@ -31,7 +33,7 @@
         <ul>
           <li><a href="#evaluator">Evaluator</a></li>
           <li><a href="#map">Map</a></li>
-          <li><a href="#About">About</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -52,6 +54,7 @@
     <section id = "evaluator">
       <h1>Skincare Evaluator</h1>
          
+      
       <img id = "picture" src = "images/sample.png"></img>
       
       <!--Form for the evaluation-->
@@ -60,7 +63,7 @@
       
       
       <!--Form for the evaluation-->
-      <form ref='uploadForm' id='uploadForm' action='https://xkpi8.sse.codesandbox.io/upload' method='post' encType="multipart/form-data">
+      <form ref='uploadForm' id = "upload" action='https://OnlineDerma.joshuazou.repl.co/upload' method='post' encType="multipart/form-data">
         <input type="file" name="sampleFile" />
         <input type="image" src="images/evaluateupload.png" class="btTxtsubmit" id="saveForm" onclick="button();"/>
       </form>     
@@ -102,18 +105,14 @@
         <input type="text" id="name" name="name" placeholder = "Your name" cols = "15" rows = "1" required>
         
         <!--Create email text box-->
-        <input type="text" id="email" name="email" placeholder = "Your email (optional)" cols = "15" rows = "1" required>
+        <input type="text" id="email" name="email" placeholder = "Your email (optional)" cols = "15" rows = "1">
         <div>
         <!--Create ask us anything text box-->
-        <textarea name="message" placeholder = "Ask us anything!" cols = "35" rows = "5"></textarea>
+        <textarea rows="2" cols="25" class = "askmessage" id="ask" placeholder="Ask us anything!" required></textarea>
         </div>
         <input type="hidden">
-        <br>
-        <br>
-
         <!--Creates submit button-->
         <input type="image" src="images/submit.png" id="submit"/>
-        <br>
       </form>
     </section>
 
