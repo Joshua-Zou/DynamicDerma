@@ -64,8 +64,10 @@
       
       <!--Form for the evaluation-->
       <form ref='uploadForm' id = "upload" action='https://OnlineDerma.joshuazou.repl.co/upload' method='post' encType="multipart/form-data">
-        <input type="file" name="sampleFile" />
-        <input type="image" src="images/evaluateupload.png" class="btTxtsubmit" id="saveForm" onclick="button();"/>
+        <div id = "twopartsofform">
+          <input type="file" name="sampleFile" />
+          <input type="image" src="images/evaluateupload.png" class="btTxtsubmit" id="saveForm" onclick="button();"/>
+        </div>
       </form>     
     </section>
     <br>
@@ -82,16 +84,23 @@
     <!--Map section begins-->
     <section id = "map">
       <h1>Dermatologist Map</h1>
-      
+      <p>See where the closest dermatologist is!</p><br>
       <!--Map image-->
       <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d85883.68155809883!2d-122.17179150249615!3d47.72586827264069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sdermatologist!5e0!3m2!1sen!2sus!4v1614382306013!5m2!1sen!2sus" width="800" height="350" style="border:0;" allowfullscreen="" loading="lazy" id = "mapimage"></iframe>
     </section>
+
+
+
     
     <!--About section begins-->
     <section id = "about">
       
       <h1>About</h1>
       <p>DynamicDerma is a website deisgned to help diagnose skin conditions while educating users about dermatology. Out evaluator can detect over 20 of the <a href = "https://www.healthline.com/health/skin-disorders"target = "_blank" class = "tooltip">most common skin diseases<span class="tooltiptext">Click to see a list of common skin diseases</span></a>. Using <a class = "tooltip" href = "https://www.google.com/imghp?hl=en"target = "_blank">Google Image Search  <span class="tooltiptext">Click to find out more about Google Images</span></a> we are able to evaluate the skin disease. For the results, tips, and information about dermatology, we used information from the <a href = "https://www.mayoclinic.org/"target = "_blank" class = "tooltip">Mayo Clinic<span class="tooltiptext">Click to find out more about Mayo Clinic</span></a> and the <a href = "https://www.aad.org/public" target = "_blank" class = "tooltip"> American Academy of Dermatology<span class="tooltiptext">Click to find out more about the American Academy of Dermatology</span></a>.</p>
+    </section>
+
+    <section id = "info">
+      <h1>Skin disease info</h1>
     </section>
 
     <!--Contact section begins-->
@@ -123,7 +132,7 @@
         <li><a href="#map">Map</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a>&copy; DynamicDerma 2021</a></li>
+        <li>&copy; DynamicDerma 2021</li><br>
       </ul>
     </footer>
     
