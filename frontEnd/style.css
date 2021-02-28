@@ -4,6 +4,9 @@
 html {
   scroll-behavior: smooth;
   font-family: 'Open Sans', sans-serif;
+  zoom: 100%;
+  margin: 0 auto;
+
 }
 /*******************************/
 /*Overall CSS Data Ends*/
@@ -14,33 +17,17 @@ html {
 /*Menu Data Begins*/
 /*******************************/
 
-
-/*Lines 22-200 of style.css and lines 23 and 36-38 of index.html are from Kevin Powell, we in no way take credit for it (soucre: https://codepen.io/kevinpowell/pen/jxppmr)*/
+/*Lines 18-166 of style.css and lines 27 and 40-42 of index.html are from Kevin Powell, we in no way take credit for it (soucre: https://codepen.io/kevinpowell/pen/jxppmr)*/
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:300,600');
-
+/*Needed for background color*/
 :root {
   --background: #99AFD7;
 }
-
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
+/*Needed for margins*/
 body {
 	margin: 0;
+  padding-bottom: 0;
 }
-
-.content {
-  height: 200vh;
-  background-image: url(//unsplash.it/1000/1000);
-  background-blend-mode: multiply;
-  background-size: cover;
-  display: grid;
-  place-items: center;
-}
-
-/* navigation styles start here */
-
 header {
   background: var(--background);
   text-align: center;
@@ -48,19 +35,17 @@ header {
   z-index: 999;
   width: 100%;
 }
-
-/* changed this from the tutorial video to
-   allow it to gain focus, making it tabbable */
+/*Makes the checkbox dissapear*/
 .nav-toggle {
   position: absolute !important;
   top: -9999px !important;
   left: -9999px !important;
 }
-
+/*Makes the pancake button clickable*/
 .nav-toggle:focus ~ .nav-toggle-label {
   outline: 3px solid rgba(lightblue, .75);
 }
-
+/*Needed to make pancake menu appear*/
 .nav-toggle-label {
   position: absolute;
   top: 0;
@@ -70,7 +55,7 @@ header {
   display: flex;
   align-items: center;
 }
-
+/*Needed to make pancake menu appear*/
 .nav-toggle-label span,
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
@@ -81,21 +66,21 @@ header {
   border-radius: 2px;
   position: relative;
 }
-
+/*Needed to make pancake menu be three bars*/
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
   content: '';
   position: absolute;
 }
-
+/*Needed to make pancake menu be three bars*/
 .nav-toggle-label span::before {
   bottom: 7px;
 }
-
+/*Needed to make pancake menu be three bars*/
 .nav-toggle-label span::after {
   top: 7px;
 }
-
+/*Needed for menu to slide down*/
 nav {
   position: absolute;
   text-align: left;
@@ -107,18 +92,18 @@ nav {
   transform-origin: top;
   transition: transform 400ms ease-in-out;
 }
-
+/*Takes away list stylesheets*/
 nav ul {
   margin: 0;
   padding: 0px;
   list-style: none;
 }
-
+/*Adding margins to list elements*/
 nav li {
   margin-bottom: 1em;
   margin-left: 1em;
 }
-
+/*Taking style out of the list links*/
 nav a {
   color: white;
   text-decoration: none;
@@ -127,75 +112,61 @@ nav a {
   opacity: 0;
   transition: opacity 150ms ease-in-out;
 }
-
+/*Changes color of link when being hovered*/
 nav a:hover {
   color: #ddd;
 }
-
+/*Makes pancacke button clickable*/
 .nav-toggle:checked ~ nav {
   transform: scale(1,1);
 }
-
+/*Makes words appear on dropdown menu*/
 .nav-toggle:checked ~ nav a {
   opacity: 1;
   transition: opacity 250ms ease-in-out 250ms;
 }
-
-@media screen and (min-width: 800px) {
+/*Transition from pancake menu to regular menu*/
+@media screen and (min-width: 1000px) {
   .nav-toggle-label {
     display: none;
   }
-
   header {
     display: grid;
     grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
   }
-  
   .logo {
     grid-column: 2 / 3;
     padding-left: 10px;
     padding-top: 10px;
-
   }
-  
   nav {
-    // all: unset; /* this causes issues with Edge, since it's unsupported */
-    
-    /* the following lines are not from my video, but add Edge support */
     position: relative;
     text-align: left;
     transition: none;
     transform: scale(1,1);
     background: none;
     top: initial;
-    left: initial;
-    /* end Edge support stuff */
-    
+    left: initial;    
     grid-column: 3 / 4;
     display: flex;
     justify-content: flex-end;
     align-items: center;
   }
-  
+  /*Makes the menu in one line*/
   nav ul {
     display: flex;
   }
-  
+  /*Makes the menu in the center*/
   nav li {
     margin-left: 3em;
     margin-bottom: 0;
   }
-  
+  /*Makes menu words visible*/
   nav a {
     opacity: 1;
     position: relative;
   }
-  
-  nav a:hover::before {
-    transform: scale(1,1);
-  }
 }
-
 
 /*******************************/
 /*Menu Data Ends*/
@@ -240,7 +211,16 @@ nav a:hover {
   background-color: white;
   color: #99AFD7;
 }
+#twopartsofform{
+  display: inline-block;
+}
+#picture {
+  margins-bottom: 10px !important; 
+}
 
+#upload {
+  margin-right: 0px !important;
+}
 #evaluator h1{
   padding-bottom: 20px;
   padding-top: 30px;
@@ -268,19 +248,18 @@ nav a:hover {
   float: right;
   margin-right: 30px;
   margin-left: 30px;
-  border-radius: 20%;
-  border: solid;
-  border-width: 5px;
+  border: none;
+  max-width: 200px;
 }
 .btTxtsubmit{
-  padding-right: 200px;
   text-align: center;
   height: auto;
+  position: relative;
+  top: 20px;
+  left: 50px;
+  width: 130px;
 }
-#myfile{
-  padding-right: 100px !important;
-  position: absolute;
-}
+
 
 /*******************************/
 /*Evaluation Data Ends*/
@@ -350,10 +329,9 @@ nav a:hover {
 
 
 #contact {
-  background-color: #99AFD7;
+  background-color: white;
   width: 100%;
-  height: 300px;
-  color: #ffffff;
+  color: #99AFD7;
   text-align: center;
   line-height: 30px;
   padding-top: 10px;
@@ -363,11 +341,16 @@ textarea{
   padding-top:0px;
   resize: none;
 }
-
+.askmessage{
+  width: 358px;
+  height:125px;
+  font-size:10pt;
+  font-family: 'Open Sans', sans-serif;
+}
 #submit{
-  padding-bottom: 100px !important;
-  padding-top: 0px !important;
-  margin: 0;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  margin: 0px;
 }
 
 /*******************************/
@@ -382,17 +365,18 @@ textarea{
 footer {
   background-color: #576580;
   width: 100%;
-  height: 300px;
   text-align: center;
   text-decoration: none; 
-  color:#ffffff;
+  color:#ffffff;#ffffff;
   style: none;
   line-height: 30px;
+  margin: 0 !important;
+  overflow: hidden;
 }
 
 footer a {
   padding-top: 10px;
-  color:#ffffff;
+  color:#ffffff; 
   text-decoration: none;
 }
 
@@ -411,7 +395,6 @@ footer ul{
 /*******************************/
 
 .scrollToTopBtn {
-  
   background-color: #8390aa;
   border: none;
   border-radius: 50%;
@@ -491,6 +474,35 @@ footer ul{
 /*Tooltip data ends*/
 /*******************************/
 
-#picture {
-  margins-bottom: 10px;
+
+/*******************************/
+/*Articles data starts*/
+/*******************************/
+#info {
+  text-align: center;
+  color: white !important;
+  background-color: #99AFD7;
+  padding-bottom: 20px;
+  line-height: 30px;
 }
+
+#info ul{
+  column-count: 2;
+}
+
+#info li {
+  list-style-type: none;
+  font-weight: bold;
+}
+#info a{
+  color: white !important;
+}
+
+#info h1{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/*******************************/
+/*articles data ends*/
+/*******************************/
