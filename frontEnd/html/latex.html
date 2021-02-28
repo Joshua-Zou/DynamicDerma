@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Metadata-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>DynamicDerma</title>
+  </head>
+
+  <!--Formatting begins-->
+  <body>
+    <!--Header begins-->
+    <section id = "header" class = "blue"> 
+      <h1>You have latex allergies</h1><br>
+      <h4>We have detected that your image shows signs of <a href = "https://www.mayoclinic.org/diseases-conditions/latex-allergy/symptoms-causes/syc-20374287" target = "_blank" class = "tooltip">latex allergies<span class="tooltiptext">Click to see where we got the information used in the article</span></a>.</h4>
+    </section>
+    
+    <!--What it is section begins-->
+    <section id = "whatitis"class = "white">
+      <h1>What are latex allergies?</h1>
+      <p>Latex allergies are a reaction to certain proteins found in natural rubber latex, a product made from the rubber tree. If you have a latex allergy, your body mistakes latex for a harmful substance. Latex allergies may cause itchy skin and hives or even anaphylaxis, a potentially life-threatening condition that can cause throat swelling and severe difficulty breathing. Your doctor can determine if you have a latex allergy or if you're at risk of developing a latex allergy.</p>
+    </section>
+
+    <!--Symptom section begins-->
+    <section id = "symptom" class = "blue">
+      <h1>Symptoms</h1>
+      <ul>
+        <li>Itching</li>
+        <li>Skin redness</li>
+        <li>Hives or rash</li>
+        <li>Sneezing</li>
+        <li>Runny nose</li>
+        <li>Symptom placeholder</li>
+        <li>Itchy, watery eyes</li>
+        <li>Scratchy throat</li>
+        <li>Difficulty breathing</li>
+        <li>Wheezing</li>
+        <li>Cough</li>
+      </ul>
+    </section>
+
+    <!--Doctor section begins-->
+    <section id = "doctor"class = "white">
+      <h1>When to see a doctor</h1>
+      <p>Seek emergency medical care if you are having or think you're having an anaphylactic reaction.<br><br>If you have less severe reactions after exposure to latex, talk to your doctor. If possible, see your doctor when you're reacting, which will aid in diagnosis.</p>
+    </section>
+
+    <!--How to section begins-->
+    <section id = "howto" class = "blue">
+      <h1>How to treat latex allergies</h1>
+      <ul>
+        <li>Avoid products with latex</li>
+        <li>Injectable epinephrine</li>
+        <li>Injectable adreniline</li>
+      </ul>
+    </section>
+
+    <section id = "images" class = "white">
+      <h1>Example Images </h1>
+      <img src = "https://i.imgur.com/URpD4BQ.jpg"> </img>
+      <img src = "https://i.imgur.com/jIZyKsx.jpg" class = "middle"> </img>
+      <img src = "https://i.imgur.com/N5tRyNT.jpg"> </img>
+
+    <style>
+      
+    #images h1{
+      padding-top: 30px;
+    
+    }
+    #images img{
+      width: 250px;
+      height: auto;
+      padding-bottom: 30px;
+      padding-right: 5px;      
+      padding-left: 5px;
+    }
+     .middle{
+      padding-left: 0px !important;
+      height: 170px !important;
+      width: auto !important;
+    </style>
+
+    <!--Footer part-->
+    <footer>
+      <p>All the text was taken from the <a href = "https://www.mayoclinic.org/" target = "_blank" class = "tooltip">Mayo Clinic<span class="tooltiptext">Click to see where we got the information used in the article</span></a>. We in no way take credit for the text used here.</p>
+      <p>To return to the evaluator, click <a href = "https://dynamicderma.joshuaren.repl.co/#evaluator">here</a>.</p>
+      <p>&copy; DynamicDerma 2021</p>
+    </footer>
+  </body>
+
+
+  <style>
+    /******************/
+    /*Overall Data Begins*/
+    /******************/
+            li{
+      text-align: left;
+    }
+   
+    ul{
+      display: inline-block; 
+      text-align: left; 
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+   *{
+      font-family: 'Open Sans', sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0px 0px 0px 0px;
+    }
+    p{
+      padding: 0px 50px 0px 50px;
+      line-height: 2; 
+    }
+    a{
+      text-decoration: underline;
+      font-weight: bold;
+    }
+    .blue{
+      background-color: #99AFD7;
+      color: white;
+    }
+    .white{
+      background-color: white;
+      color: #99AFD7;
+    }
+    #header, #whatitis, #symptom, #doctor, #howto, footer{
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    h1{
+      padding-bottom: 30px;
+    }
+    a{
+      color: white;
+      font-weight: bold;
+    }
+      li{
+      line-height: 2; 
+    }
+
+    /******************/
+    /*Overall Data Ends*/
+    /******************/
+
+
+    /******************/
+    /*Header Data Begins*/
+    /******************/
+
+    #header h1{
+      font-size: 50px;
+    }
+    /******************/
+    /*Header Data Ends*/
+    /******************/
+
+    /******************/
+    /*Symptoms Data Begins*/
+    /******************/
+    footer{
+      background-color: #576580;
+      width: 100%;
+      color: white;
+    }
+    /******************/
+    /*Symptoms Data Ends*/
+    /******************/
+
+    /*******************************/
+    /*Tooltip data begins*/
+    /*******************************/
+    /*The next 35 lines of CSS were not created by us, the code is from https://www.w3schools.com/css/css_tooltip.asp*/
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      border-bottom: 0px dotted black;
+    }
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 200px;
+      background-color: #555;
+      color: #fff;
+      font-size: 14px;
+      text-align: center;
+      padding: 3px 5px;
+      border-radius: 5px;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      margin-left: -60px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .tooltip .tooltiptext::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #555 transparent transparent transparent;
+    }
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
+
+
+    /*******************************/
+    /*Tooltip data ends*/
+    /*******************************/
+  </style>
+</html>
