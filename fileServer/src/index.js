@@ -10,7 +10,7 @@ var cloudinary = require("cloudinary");
 cloudinary.config({
   cloud_name: "dnh2hkbuf",
   api_key: "491874445585153",
-  api_secret: "pog_api_secret_key_that_I_don't_want_to_show"
+  api_secret: "pgq6oDTwMgGPrXHa64bTMtidsOk"
 });
 
 app.use(bodyParser.json({ extended: true }));
@@ -60,159 +60,186 @@ app.post("/upload", function (req, res) {
         async function main() {
           var imageResult;
           const doSomething = (results) => {
-            if (results[1] === undefined) {
+            for (var i = 0; 0<results.length; i++){
+            
+            if (results[i] === undefined) {
               res.redirect(
                 "https://front-end.joshuaren.repl.co/html/error.html"
               );
               return;
             }
-            console.log(results[1].title);
-            imageResult = results[1].title;
+            
+            console.log(results[i].title);
+            imageResult = results[i].title;
             if (imageResult.toString().toLowerCase().includes("acne")) {
               res.redirect(
                 "https://front-end.joshuaren.repl.co/html/acne.html"
               );
+              return;
             } else if (
               imageResult.toString().toLowerCase().includes("cold sore")
             ) {
               res.redirect(
                 "https://front-end.joshuaren.repl.co/html/cold_sore.html"
               );
+              return;
             } else if (
-              imageResult.toString().toLowerCase().includes("blister")
+              imageResult.toString().toLowerCase().includes("blister")|| imageResult.toString().toLowerCase().includes("epidermolysis")
             ) {
               res.redirect(
                 "https://front-end.joshuaren.repl.co/html/blisters.html"
               );
+              return;
             } else if (imageResult.toString().toLowerCase().includes("hive")) {
               res.redirect(
                 "https://front-end.joshuaren.repl.co/html/hives.html"
               );
+              return;
             } else if (
               imageResult.toString().toLowerCase().includes("actinic")
             ) {
               res.redirect(
                 "https://front-end.joshuaren.repl.co/html/actinic_keratosis.html"
               );
+              return;
             } else if (
               imageResult.toString().toLowerCase().includes("rosacea")
             ) {
               res.redirect(
                 "https://front-end.joshuaren.repl.co/html/rosacea.html"
               );
+              return;
             } else if (
               imageResult.toString().toLowerCase().includes("carbuncle")
             ) {
               res.redirect(
                 "https://front-end.joshuaren.repl.co/html/carbuncle.html"
               );
+              return;
             } else if (imageResult.toString().toLowerCase().includes("latex")) {
               res.redirect(
                 "https://front-end.joshuaren.repl.co/html/latex.html"
               );
-            } else if (
-              imageResult.toString().toLowerCase().includes("eczema")
-            ) {
-              res.redirect(
-                "https://front-end.joshuaren.repl.co/html/eczema.html"
-              );
-            } else if (
-              imageResult.toString().toLowerCase().includes("psoriasis")
-            ) {
-              res.redirect(
-                "https://front-end.joshuaren.repl.co/html/psoriasis.html"
-              );
-            } else if (
-              imageResult.toString().toLowerCase().includes("cellulitis")
-            ) {
-              res.redirect(
-                "https://front-end.joshuaren.repl.co/html/cellulitis.html"
-              );
-            } else if (
-              imageResult.toString().toLowerCase().includes("measles")
-            ) {
-              res.redirect(
-                "https://front-end.joshuaren.repl.co/html/measles.html"
-              );
-            } else if (imageResult.toString().toLowerCase().includes("basal")) {
-              res.redirect(
-                "https://front-end.joshuaren.repl.co/html/basal_cell_carcinoma.html"
-              );
-            } else if (
-              imageResult.toString().toLowerCase().includes("squamous")
-            ) {
-              res.redirect(
-                "https://front-end.joshuaren.repl.co/html/squamouscancer.html"
-              );
-            } else if (
-              imageResult.toString().toLowerCase().includes("melanoma")
-            ) {
-              res.redirect(
-                "https://front-end.joshuaren.repl.co/html/melanoma.html"
-              );
-            } else if (imageResult.toString().toLowerCase().includes("lupus")) {
-              res.redirect(
-                "https://front-end.joshuaren.repl.co/html/lupus.html"
-              );
-            } else if (
-              imageResult.toString().toLowerCase().includes("dermatitis")
-            ) {
-              res.redirect(
-                "https://front-end.joshuaren.repl.co/html/contact_dermatitis.html"
-              );
-            } else if (
-              imageResult.toString().toLowerCase().includes("vitiligo")
-            ) {
-              res.redirect(
-                "https://front-end.joshuaren.repl.co/html/vitiligo.html"
-              );
-            } else if (imageResult.toString().toLowerCase().includes("wart")) {
-              res.redirect(
-                "https://front-end.joshuaren.repl.co/html/wart.html"
-              );
-            } else if (
-              imageResult.toString().toLowerCase().includes("chicken")
-            ) {
-              res.redirect(
-                "https://front-end.joshuaren.repl.co/html/chickenpox.html"
-              );
+              return;
             } else if (
               imageResult.toString().toLowerCase().includes("seborrheic")
             ) {
               res.redirect(
                 "https://front-end.joshuaren.repl.co/html/seborrheicegzma.html"
               );
+              return;
+            } else if (
+              imageResult.toString().toLowerCase().includes("eczema")
+            ) {
+              res.redirect(
+                "https://front-end.joshuaren.repl.co/html/eczema.html"
+              );
+              return;
+            } else if (
+              imageResult.toString().toLowerCase().includes("psoriasis")
+            ) {
+              res.redirect(
+                "https://front-end.joshuaren.repl.co/html/psoriasis.html"
+              );
+              return;
+            } else if (
+              imageResult.toString().toLowerCase().includes("cellulitis")
+            ) {
+              res.redirect(
+                "https://front-end.joshuaren.repl.co/html/cellulitis.html"
+              );
+              return;
+            } else if (
+              imageResult.toString().toLowerCase().includes("measles")
+            ) {
+              res.redirect(
+                "https://front-end.joshuaren.repl.co/html/measles.html"
+              );
+              return;
+            } else if (imageResult.toString().toLowerCase().includes("basal")) {
+              res.redirect(
+                "https://front-end.joshuaren.repl.co/html/basal_cell_carcinoma.html"
+              );
+              return;
+            } else if (
+              imageResult.toString().toLowerCase().includes("squamous")
+            ) {
+              res.redirect(
+                "https://front-end.joshuaren.repl.co/html/squamouscancer.html"
+              );
+              return;
+            } else if (
+              imageResult.toString().toLowerCase().includes("melanoma")
+            ) {
+              res.redirect(
+                "https://front-end.joshuaren.repl.co/html/melanoma.html"
+              );
+              return;
+            } else if (imageResult.toString().toLowerCase().includes("lupus")) {
+              res.redirect(
+                "https://front-end.joshuaren.repl.co/html/lupus.html"
+              );
+              return;
+            } else if (
+              imageResult.toString().toLowerCase().includes("dermatitis")
+            ) {
+              res.redirect(
+                "https://front-end.joshuaren.repl.co/html/contact_dermatitis.html"
+              );
+              return;
+            } else if (
+              imageResult.toString().toLowerCase().includes("vitiligo")
+            ) {
+              res.redirect(
+                "https://front-end.joshuaren.repl.co/html/vitiligo.html"
+              );
+              return;
+            } else if (imageResult.toString().toLowerCase().includes("wart")) {
+              res.redirect(
+                "https://front-end.joshuaren.repl.co/html/wart.html"
+              );
+              return;
+            } else if (
+              imageResult.toString().toLowerCase().includes("chicken")
+            ) {
+              res.redirect(
+                "https://front-end.joshuaren.repl.co/html/chickenpox.html"
+              );
+              return;
             } else if (
               imageResult.toString().toLowerCase().includes("pilaris")
             ) {
               res.redirect(
                 "https://front-end.joshuaren.repl.co/html/keratosis_pilaris.html"
               );
+              return;
             } else if (
               imageResult.toString().toLowerCase().includes("ringworm")
             ) {
               res.redirect(
                 "https://front-end.joshuaren.repl.co/html/ringworm.html"
               );
+              return;
             } else if (
               imageResult.toString().toLowerCase().includes("melasma")
             ) {
               res.redirect(
                 "https://front-end.joshuaren.repl.co/html/melasma.html"
               );
+              return;
             } else if (
               imageResult.toString().toLowerCase().includes("impetigo")
             ) {
               res.redirect(
                 "https://front-end.joshuaren.repl.co/html/impetigo.html"
               );
-            } else {
-              res.redirect(
-                "https://front-end.joshuaren.repl.co/html/nomatches.html"
-              );
+              return;
             }
           };
-
+          res.redirect(
+                "https://front-end.joshuaren.repl.co/html/nomatches.html"
+              );
+          };
           reverseImageSearch(error.url, doSomething);
         }
       }
