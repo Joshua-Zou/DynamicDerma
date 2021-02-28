@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Metadata-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>DynamicDerma</title>
+  </head>
+
+  <!--Formatting begins-->
+  <body>
+    <!--Header begins-->
+    <section id = "header" class = "blue"> 
+      <h1>You have blisters</h1><br>
+      <h4>We have detected that your image shows signs of <a href = "https://www.mayoclinic.org/diseases-conditions/dyshidrosis/symptoms-causes/syc-20352342" target = "_blank" class = "tooltip">blisters<span class="tooltiptext">Click to see where we got the information used in the article</span></a>.</h4>
+    </section>
+    
+    <!--What it is section begins-->
+    <section id = "whatitis"class = "white">
+      <h1>What are blisters?</h1>
+      <p>Dyshidrosis is a skin condition that causes small, fluid-filled blisters to form on the palms of the hands and sides of the fingers. Sometimes the bottoms of the feet are affected too.</p>
+    </section>
+
+    <!--Symptom section begins-->
+    <section id = "symptom" class = "blue">
+      <h1>Symptoms</h1>
+      <ul>
+        <li>The blisters are usually small — about the width of a standard pencil lead — and grouped in clusters, with an appearance similar to tapioca</li>
+        <li>In more-severe cases, the small blisters may merge to form larger blisters</li>
+        <li>Skin affected by dyshidrosis can be painful and very itchy</li>
+        <li>Once the blisters dry and flake off, which occurs in about three weeks, the underlying skin may be red and tender</li>
+      </ul>
+    </section>
+
+    <!--Doctor section begins-->
+    <section id = "doctor"class = "white">
+      <h1>When to see a doctor</h1>
+      <p>Call your doctor if you have a rash on your hands or feet that doesn't go away on its own.</p>
+    </section>
+
+    <!--How to section begins-->
+    <section id = "howto" class = "blue">
+      <h1>How to treat blisters</h1>
+      <ul>
+        <li>Corticosteroids</li>
+        <li>Phototherapy</li>
+        <li>Immune-suppressing ointments</li>
+        <li>Botulinum toxin injections</li>
+      </ul>
+    </section>
+
+    <section id = "images" class = "white">
+      <h1>Example Images </h1>
+      <img src = "https://i.imgur.com/zh6SpSS.jpg"> </img>
+      <img src = "https://i.imgur.com/9myY4rt.jpg" class = "middle"> </img>
+      <img src = "https://i.imgur.com/jLjzlKF.jpg"> </img>
+
+    <style>
+    #images h1{
+      padding-top: 30px;
+    
+    }
+    #images img{
+      width: 250px;
+      height: auto;
+      padding-bottom: 30px;
+      padding-right: 5px;      
+      padding-left: 5px;
+    }
+     .middle{
+      padding-left: 0px !important;
+      height: 170px !important;
+      width: auto !important;
+    }
+    </style>
+    </section>
+
+    <!--Footer part-->
+    <footer>
+      <p>To return to the evaluator, click <a href = "https://dynamicderma.joshuaren.repl.co/#evaluator">here</a>.</p>
+      <p>&copy; DynamicDerma 2021</p>
+
+    </footer>
+  </body>
+
+
+  <style>
+    /******************/
+    /*Overall Data Begins*/
+    /******************/
+         li{
+      text-align: left;
+    }
+   
+    ul{
+      display: inline-block; 
+      text-align: left; 
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+   *{
+      font-family: 'Open Sans', sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0px 0px 0px 0px;
+    }
+    p{
+      padding: 0px 50px 0px 50px;
+      line-height: 2; 
+    }
+    a{
+      text-decoration: underline;
+      font-weight: bold;
+    }
+    .blue{
+      background-color: #99AFD7;
+      color: white;
+    }
+    .white{
+      background-color: white;
+      color: #99AFD7;
+    }
+    #header, #whatitis, #symptom, #doctor, #howto, footer{
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    h1{
+      padding-bottom: 30px;
+    }
+    a{
+      color: white;
+      font-weight: bold;
+    }
+    li{
+      line-height: 2; 
+    }
+    /******************/
+    /*Overall Data Ends*/
+    /******************/
+
+
+    /******************/
+    /*Header Data Begins*/
+    /******************/
+
+    #header h1{
+      font-size: 50px;
+    }
+    /******************/
+    /*Header Data Ends*/
+    /******************/
+
+    /******************/
+    /*Symptoms Data Begins*/
+    /******************/
+    footer{
+      background-color: #576580;
+      width: 100%;
+      color: white;
+    }
+    /******************/
+    /*Symptoms Data Ends*/
+    /******************/
+
+    /*******************************/
+    /*Tooltip data begins*/
+    /*******************************/
+    /*The next 35 lines of CSS were not created by us, the code is from https://www.w3schools.com/css/css_tooltip.asp*/
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      border-bottom: 0px dotted black;
+    }
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 200px;
+      background-color: #555;
+      color: #fff;
+      font-size: 14px;
+      text-align: center;
+      padding: 3px 5px;
+      border-radius: 5px;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      margin-left: -60px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .tooltip .tooltiptext::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #555 transparent transparent transparent;
+    }
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
+
+
+    /*******************************/
+    /*Tooltip data ends*/
+    /*******************************/
+  </style>
+</html>

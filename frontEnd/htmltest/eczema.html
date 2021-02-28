@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Metadata-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>DynamicDerma</title>
+  </head>
+
+  <!--Formatting begins-->
+  <body>
+    <!--Header begins-->
+    <section id = "header" class = "blue"> 
+      <h1>You have eczema</h1><br>
+      <h4>We have detected that your image shows signs of <a href = "https://www.mayoclinic.org/diseases-conditions/atopic-dermatitis-eczema/symptoms-causes/syc-20353273" target = "_blank" class = "tooltip">eczema<span class="tooltiptext">Click to see where we got the information used in the article</span></a>.</h4>
+    </section>
+    
+    <!--What it is section begins-->
+    <section id = "whatitis"class = "white">
+      <h1>What is eczema?</h1>
+      <p>Atopic dermatitis (eczema) is a condition that makes your skin red and itchy. It's common in children but can occur at any age. Atopic dermatitis is long lasting (chronic) and tends to flare periodically. It may be accompanied by asthma or hay fever.</p>
+    </section>
+
+    <!--Symptom section begins-->
+    <section id = "symptom" class = "blue">
+      <h1>Symptoms</h1>
+      <p><b>Atopic dermatitis (eczema) signs and symptoms vary widely from person to person and include</b></p><br>
+      <ul>
+        <li>Dry skin</li>
+        <li>Itching, which may be severe, especially at night</li>
+        <li>Red to brownish-gray patches, especially on the hands, feet, ankles, wrists, neck, upper chest, eyelids, inside the bend of the elbows and knees, and in infants, the face and scalp</li>
+        <li>Small, raised bumps, which may leak fluid and crust over when scratched</li>
+        <li>Thickened, cracked, scaly skin</li>
+        <li>Raw, sensitive, swollen skin from scratching</li>
+      </ul>
+    </section>
+
+    <!--Doctor section begins-->
+    <section id = "doctor"class = "white">
+      <h1>When to See a Doctor</h1>
+      <p>See a doctor if you or your child: Is so uncomfortable that the condition is affecting sleep and daily activities. Has a skin infection — look for red streaks, pus, yellow scabs. Continues to experience symptoms despite trying home remedies</p>
+    </section>
+
+    <!--How to section begins-->
+    <section id = "howto" class = "blue">
+      <h1>How to Treat eczema</h1>
+      <ul>
+        <li>Creams that control itching and help repair the skin</li>
+        <li>Drugs to fight infection</li>
+        <li>Oral drugs that control inflammation</li>
+        <li>Newer option for severe eczema</li>
+      </ul>
+    </section>
+
+    <section id = "images" class = "white">
+      <h1>Example Images </h1>
+      <img src = "https://i.imgur.com/7iIb2TZ.jpg"> </img>
+      <img src = "https://i.imgur.com/E4KFNh5.jpg" class = "middle"> </img>
+      <img src = "https://i.imgur.com/Gq6rXyk.jpg"> </img>
+
+    <style>
+      
+    #images h1{
+      padding-top: 30px;
+    
+    }
+    #images img{
+      width: 250px;
+      height: auto;
+      padding-bottom: 30px;
+      padding-right: 5px;      
+      padding-left: 5px;
+    }
+     .middle{
+      padding-left: 0px !important;
+      height: 170px !important;
+      width: auto !important;
+    }
+    </style>
+    </section>
+
+    <!--Footer part-->
+    <footer>
+      <p>To return to the evaluator, click <a href = "https://dynamicderma.joshuaren.repl.co/#evaluator">here</a>.</p>
+      <p>&copy; DynamicDerma 2021</p>
+
+    </footer>
+  </body>
+
+
+  <style>
+    /******************/
+    /*Overall Data Begins*/
+    /******************/
+         li{
+      text-align: left;
+    }
+   
+    ul{
+      display: inline-block; 
+      text-align: left; 
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+
+   *{
+      font-family: 'Open Sans', sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0px 0px 0px 0px;
+    }
+    p{
+      padding: 0px 50px 0px 50px;
+      line-height: 2; 
+    }
+    a{
+      text-decoration: underline;
+      font-weight: bold;
+    }
+    .blue{
+      background-color: #99AFD7;
+      color: white;
+    }
+    .white{
+      background-color: white;
+      color: #99AFD7;
+    }
+    #header, #whatitis, #symptom, #doctor, #howto, footer{
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    h1{
+      padding-bottom: 30px;
+    }
+    a{
+      color: white;
+      font-weight: bold;
+    }
+    li{
+      line-height: 2; 
+    }
+    /******************/
+    /*Overall Data Ends*/
+    /******************/
+
+
+    /******************/
+    /*Header Data Begins*/
+    /******************/
+
+    #header h1{
+      font-size: 50px;
+    }
+    /******************/
+    /*Header Data Ends*/
+    /******************/
+
+    /******************/
+    /*Symptoms Data Begins*/
+    /******************/
+    footer{
+      background-color: #576580;
+      width: 100%;
+      color: white;
+    }
+    /******************/
+    /*Symptoms Data Ends*/
+    /******************/
+
+    /*******************************/
+    /*Tooltip data begins*/
+    /*******************************/
+    /*The next 35 lines of CSS were not created by us, the code is from https://www.w3schools.com/css/css_tooltip.asp*/
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      border-bottom: 0px dotted black;
+    }
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 200px;
+      background-color: #555;
+      color: #fff;
+      font-size: 14px;
+      text-align: center;
+      padding: 3px 5px;
+      border-radius: 5px;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      margin-left: -60px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .tooltip .tooltiptext::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #555 transparent transparent transparent;
+    }
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
+
+
+    /*******************************/
+    /*Tooltip data ends*/
+    /*******************************/
+  </style>
+</html>

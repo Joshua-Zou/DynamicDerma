@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Metadata-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>DynamicDerma</title>
+  </head>
+
+  <!--Formatting begins-->
+  <body>
+    <!--Header begins-->
+    <section id = "header" class = "blue"> 
+      <h1>You have melanoma.</h1><br>
+      <h4>We have detected that your image shows signs of <a href = "https://www.mayoclinic.org/diseases-conditions/melanoma/symptoms-causes/syc-20374884" target = "_blank" class = "tooltip">melanoma<span class="tooltiptext">Click to see where we got the information used in the article</span></a>.</h4>
+    </section>
+    
+    <!--What it is section begins-->
+    <section id = "whatitis"class = "white">
+      <h1>What is melanoma?</h1>
+      <p>Melanoma, the most serious type of skin cancer, develops in the cells (melanocytes) that produce melanin — the pigment that gives your skin its color. Melanoma can also form in your eyes and, rarely, inside your body, such as in your nose or throat.</p>
+    </section>
+
+    <!--Symptom section begins-->
+    <section id = "symptom" class = "blue">
+      <h1>Symptoms</h1>
+      <p>Melanomas can develop anywhere on your body. They most often develop in areas that have had exposure to the sun, such as your back, legs, arms and face.</p><br>
+      <ul>
+        <li>A change in an existing mole</li>
+        <li>The development of a new pigmented or unusual-looking growth on your skin</li>
+        <li>Melanoma doesn't always begin as a mole. It can also occur on otherwise normal-appearing skin.</li>
+        <li>Unusual moles</li>
+        <li>Moles have asymmetrical shape</li>
+        <li>Moles have changes in color</li>
+      </ul>
+    </section>
+
+    <!--Doctor section begins-->
+    <section id = "doctor"class = "white">
+      <h1>When to See a Doctor</h1>
+      <p>Make an appointment with your doctor if you notice any skin changes that seem unusual.</p>
+    </section>
+
+    <!--How to section begins-->
+    <section id = "howto" class = "blue">
+      <h1>How to treat melanoma</h1>
+      <p>You can't, but with a visit to a doctor, they will do the below treatment</p>
+      <br>
+      <p>Treatment for early-stage melanomas usually includes surgery to remove the melanoma. A very thin melanoma may be removed entirely during the biopsy and require no further treatment. Otherwise, your surgeon will remove the cancer as well as a border of normal skin and a layer of tissue beneath the skin. For people with early-stage melanomas, this may be the only treatment needed.</p>
+    </section>
+<section id = "images" class = "white">
+      <h1>Example Images </h1>
+      <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Melanoma.jpg/1200px-Melanoma.jpg"> </img>
+      <img src = "https://www.mayoclinic.org/-/media/kcms/gbs/patient-consumer/images/2013/11/15/17/38/ds00121_-ds00439_im01637_r7_molethu_jpg.jpg" class = "middle"> </img>
+      <img src = "https://www.verywellhealth.com/thmb/ty--8DVeuVnicNTls2XvMeuA_wE=/2048x1536/filters:no_upscale():max_bytes(150000):strip_icc()/mel-is10-ec578b15c26e426d86a6f8171a61227a.JPG"> </img>
+
+    <style>
+      
+    #images h1{
+      padding-top: 30px;
+    
+    }
+    #images img{
+      width: 250px;
+      height: auto;
+      padding-bottom: 30px;
+      padding-right: 5px;      
+      padding-left: 5px;
+    }
+     .middle{
+      padding-left: 0px !important;
+      height: 170px !important;
+      width: auto !important;
+    }
+    </style>
+    </section>
+    <!--Footer part-->
+    <footer>
+      <p>To return to the evaluator, click <a href = "https://dynamicderma.joshuaren.repl.co/#evaluator">here</a>.</p>
+      <p>&copy; DynamicDerma 2021</p>
+
+    </footer>
+  </body>
+
+
+  <style>
+    /******************/
+    /*Overall Data Begins*/
+    /******************/
+   *{
+      font-family: 'Open Sans', sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0px 0px 0px 0px;
+    }
+    p{
+      padding: 0px 50px 0px 50px;
+      line-height: 2; 
+    }
+    a{
+      text-decoration: underline;
+      font-weight: bold;
+    }
+    .blue{
+      background-color: #99AFD7;
+      color: white;
+    }
+    .white{
+      background-color: white;
+      color: #99AFD7;
+    }
+    #header, #whatitis, #symptom, #doctor, #howto, footer{
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    h1{
+      padding-bottom: 30px;
+    }
+    a{
+      color: white;
+      font-weight: bold;
+    }
+    li{
+      line-height: 2; 
+    }
+     li{
+      text-align: left;
+    }
+   
+    ul{
+      display: inline-block; 
+      text-align: left; 
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+
+    /******************/
+    /*Overall Data Ends*/
+    /******************/
+
+
+    /******************/
+    /*Header Data Begins*/
+    /******************/
+
+    #header h1{
+      font-size: 50px;
+    }
+    /******************/
+    /*Header Data Ends*/
+    /******************/
+
+    /******************/
+    /*Symptoms Data Begins*/
+    /******************/
+    footer{
+      background-color: #576580;
+      width: 100%;
+      color: white;
+    }
+    /******************/
+    /*Symptoms Data Ends*/
+    /******************/
+
+    /*******************************/
+    /*Tooltip data begins*/
+    /*******************************/
+    /*The next 35 lines of CSS were not created by us, the code is from https://www.w3schools.com/css/css_tooltip.asp*/
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      border-bottom: 0px dotted black;
+    }
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 200px;
+      background-color: #555;
+      color: #fff;
+      font-size: 14px;
+      text-align: center;
+      padding: 3px 5px;
+      border-radius: 5px;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      margin-left: -60px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .tooltip .tooltiptext::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #555 transparent transparent transparent;
+    }
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
+
+
+    /*******************************/
+    /*Tooltip data ends*/
+    /*******************************/
+  </style>
+</html>
